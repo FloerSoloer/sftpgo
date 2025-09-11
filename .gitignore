@@ -3,4 +3,6 @@
 
 !/root/var/lib/sftpgo/.gitkeep
 !/.gitignore
+!/autostart.sh
 !/docker-compose.yml
+!/sftpgo.service.example

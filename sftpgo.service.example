@@ -1,0 +1,5 @@
+[Unit]
+Description=SFTP golang docker server
+
+[Service]
+ExecStart=docker-compose -f ${APATH} up
