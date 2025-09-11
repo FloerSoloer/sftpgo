@@ -1,0 +1,11 @@
+services:
+  sftp:
+    image: drakkan/sftpgo:2.6.x-distroless-slim
+    env_file:
+      - path: .env
+    ports:
+      - 7300:8080
+      - 7301:2022
+    volumes:
+      - /mnt/md0:/srv/sftpgo
+      - ./root/var/lib/sftpgo:/var/lib/sftpgo

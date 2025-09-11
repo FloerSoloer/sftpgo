@@ -1,0 +1,6 @@
+*
+!*/
+
+!/root/var/lib/sftpgo/.gitkeep
+!/.gitignore
+!/docker-compose.yml
