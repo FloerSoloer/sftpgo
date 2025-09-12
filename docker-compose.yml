@@ -1,6 +1,6 @@
 services:
   sftp:
-    image: drakkan/sftpgo:2.6.x-distroless-slim
+    image: drakkan/sftpgo:2.6.x-alpine-slim
     env_file:
       - path: .env
     ports:
