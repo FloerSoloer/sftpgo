@@ -2,4 +2,5 @@
 Description=SFTP golang docker server
 
 [Service]
-ExecStart=docker-compose -f ${APATH} up
+EnvironmentFile=${AWD}/.env.private
+ExecStart=docker-compose -f ${AWD}/docker-compose.yml up

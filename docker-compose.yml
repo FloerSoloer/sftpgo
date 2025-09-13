@@ -3,13 +3,12 @@ services:
     build: .
     env_file:
       - path: .env.public
-      - path: .env.private
     ports:
-      - 7300:8080
-      - 7301:2022
-      - 7302:7302
+      - ${HTTP_PORT}:8080
+      - ${SFTP_PORT}:2022
+      - ${LIGHTTPD_PORT}:8081
     volumes:
-      - /mnt/md0:/srv/sftpgo
+      - ${MNT}:/srv/sftpgo
       - ./root/var/lib/sftpgo:/var/lib/sftpgo
     post_start:
       - command: lighttpd -f /var/lib/sftpgo/lighttpd.conf

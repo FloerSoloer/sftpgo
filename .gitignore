@@ -3,6 +3,7 @@
 
 !/root/var/lib/sftpgo/.gitkeep
 !/root/var/lib/sftpgo/lighttpd.conf
+!/.env.private.example
 !/.env.public
 !/.gitignore
 !/Dockerfile
