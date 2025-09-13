@@ -5,9 +5,9 @@ services:
       - path: .env.public
       - path: .env.private
     ports:
-      - 7300:8080
-      - 7301:2022
-      - 7302:7302
+      - 4893:8080
+      - 4894:2022
+      - 4895:8081
     volumes:
       - /mnt/md0:/srv/sftpgo
       - ./root/var/lib/sftpgo:/var/lib/sftpgo
