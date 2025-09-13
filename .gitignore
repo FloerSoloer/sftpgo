@@ -2,6 +2,7 @@
 !*/
 
 !/root/var/lib/sftpgo/.gitkeep
+!/.env.public
 !/.gitignore
 !/autostart.sh
 !/docker-compose.yml

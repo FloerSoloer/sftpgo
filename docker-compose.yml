@@ -2,7 +2,8 @@ services:
   sftp:
     image: drakkan/sftpgo:2.6.x-alpine-slim
     env_file:
-      - path: .env
+      - path: .env.public
+      - path: .env.private
     ports:
       - 7300:8080
       - 7301:2022
