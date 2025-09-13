@@ -2,8 +2,10 @@
 !*/
 
 !/root/var/lib/sftpgo/.gitkeep
+!/root/var/lib/sftpgo/lighttpd.conf
 !/.env.public
 !/.gitignore
+!/Dockerfile
 !/autostart.sh
 !/docker-compose.yml
 !/sftpgo.service.example

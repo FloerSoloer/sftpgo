@@ -1,12 +1,15 @@
 services:
   sftp:
-    image: drakkan/sftpgo:2.6.x-alpine-slim
+    build: .
     env_file:
       - path: .env.public
       - path: .env.private
     ports:
       - 7300:8080
       - 7301:2022
+      - 7302:7302
     volumes:
       - /mnt/md0:/srv/sftpgo
       - ./root/var/lib/sftpgo:/var/lib/sftpgo
+    post_start:
+      - command: lighttpd -f /var/lib/sftpgo/lighttpd.conf
