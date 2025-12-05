@@ -13,6 +13,10 @@ services:
       - ${HTTP_PORT}:8080
       - ${SFTP_PORT}:2022
       - ${LIGHTTPD_PORT}:8081
+    networks:
+      default:
+        aliases:
+          - ${DOCKER_NETWORK_ALIAS}
     volumes:
       - ${MNT}:/srv/sftpgo
       - ./root/var/lib/sftpgo:/var/lib/sftpgo
