@@ -1,6 +1,12 @@
 services:
   sftp:
     build: .
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 3
+        window: 300s
     env_file:
       - path: .env.public
     ports:
