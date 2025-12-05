@@ -18,3 +18,7 @@ services:
       - ./root/var/lib/sftpgo:/var/lib/sftpgo
     post_start:
       - command: lighttpd -f /var/lib/sftpgo/lighttpd.conf
+networks:
+  default:
+    external: true
+    name: ${DOCKER_NETWORK}
